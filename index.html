@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dropdown Test</title>
+    <style>
+      /* Простейшие стили, чтобы хоть что-то увидеть */
+      .dropdown-btn {
+        padding: 10px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .dropdown-menu {
+        border: 1px solid #ccc;
+      }
+      .is-closed {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Тест моего пафосного дропдауна</h1>
+    <div id="my-dropdown"></div>
+
+    <script type="module">
+      // Импортируем твой класс из собранного файла
+      import Dropdown from "./dist/dropdown.esm.js";
+
+      // Готовим данные для меню
+      const menuOptions = {
+        items: [{ text: "Профиль" }, { text: "Настройки" }, { text: "Выход" }],
+      };
+
+      // Находим контейнер
+      const dropdownContainer = document.getElementById("my-dropdown");
+
+      // Создаём экземпляр твоего чуда
+      new Dropdown(dropdownContainer, menuOptions);
+    </script>
+  </body>
+</html>

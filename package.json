@@ -1,0 +1,36 @@
+{
+  "name": "drop-it-like-its-hot",
+  "version": "1.0.1",
+  "description": "Just another dropdown menu, but this one drops it like it's hot. Simple, reusable, and ready to party in your project.",
+  "keywords": [
+    "dropdown",
+    "menu",
+    "drop-it",
+    "snoop-dogg",
+    "hot",
+    "ui",
+    "interactive"
+  ],
+  "homepage": "https://github.com/LIGECT/vanilla-js-dropdown#readme",
+  "bugs": {
+    "url": "https://github.com/LIGECT/vanilla-js-dropdown/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LIGECT/vanilla-js-dropdown.git"
+  },
+  "license": "MIT",
+  "author": "LIGECT <ligect@gmail.com> (https://github.com/LIGECT)",
+  "type": "module",
+  "main": "dist/dropdown.cjs.js",
+  "module": "dist/dropdown.esm.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "rollup": "^4.52.5"
+  }
+}
