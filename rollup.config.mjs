@@ -1,6 +1,7 @@
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import terser from "@rollup/plugin-terser";
+import postcss from "rollup-plugin-postcss";
 
 export default {
   input: "src/main.js",
@@ -21,6 +22,10 @@ export default {
     },
   ],
   plugins: [
+    postcss({
+      extract: "style.css",
+      minimize: true,
+    }),
     nodeResolve(),
     babel({
       babelHelpers: "bundled",

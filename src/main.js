@@ -1,4 +1,4 @@
-console.log("Скрипт завелся");
+import "./style.css";
 class Dropdown {
   constructor(element) {
     if (!element) {
@@ -8,8 +8,8 @@ class Dropdown {
     }
 
     this.container = element;
-    this.toggleButton = this.container.querySelector(".dropdown-toggle");
-    this.menu = this.container.querySelector(".dropdown-menu");
+    this.toggleButton = this.container.querySelector(".dropdown__button");
+    this.menu = this.container.querySelector(".dropdown__menu");
 
     this.boundToggle = this.toggle.bind(this);
 
@@ -23,7 +23,7 @@ class Dropdown {
   }
 
   toggle() {
-    this.menu.classList.toggle("is-closed");
+    this.menu.classList.toggle("dropdown__menu--visible");
   }
 
   destroy() {

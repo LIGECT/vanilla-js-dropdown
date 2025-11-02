@@ -3,26 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <title>Dropdown Test</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="dist/style.css" />
   </head>
   <body>
     <div class="dropdown" id="my-dropdown">
-      <button class="dropdown-toggle" type="button">Dropdown button</button>
-      <div class="dropdown-menu is-closed">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
-
-    <div class="dropdown" id="my-dropdown2">
-      <button class="dropdown-toggle" type="button">Dropdown button</button>
-      <div class="dropdown-menu is-closed">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+      <button class="dropdown__button" type="button">Dropdown button</button>
+      <div class="dropdown__menu dropdown__menu--visible">
+        <a class="dropdown__item" href="#">Action</a>
+        <a class="dropdown__item" href="#">Another action</a>
+        <a class="dropdown__item" href="#">Something else here</a>
       </div>
     </div>
   </body>
-  <script type="module" src="./src/main.js"></script>
+  <script type="module" src="./dist/dropdown.esm.js"></script>
 </html>
