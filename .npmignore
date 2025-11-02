@@ -1,0 +1,42 @@
+# Файлы зависимостей
+# Обычно устанавливаются через npm или yarn
+node_modules/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Папки для сборки проекта (если вы используете сборщики)
+# Мы НЕ игнорируем dist/, так как он должен быть опубликован в npm
+build/
+out/
+
+# Файлы переменных окружения
+# Содержат секретные ключи и API-токены. Никогда не добавляйте их в Git!
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Файлы настроек редакторов кода
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Файлы операционной системы
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Временные файлы
+*.tmp
+*~

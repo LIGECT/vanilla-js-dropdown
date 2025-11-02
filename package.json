@@ -1,6 +1,11 @@
 {
   "name": "drop-it-like-its-hot",
   "version": "2.0.0",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "description": "Just another dropdown menu, but this one drops it like it's hot. Simple, reusable, and ready to party in your project.",
   "keywords": [
     "dropdown",
