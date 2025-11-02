@@ -3,41 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <title>Dropdown Test</title>
-    <style>
-      /* Простейшие стили, чтобы хоть что-то увидеть */
-      .dropdown-btn {
-        padding: 10px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-      .dropdown-menu {
-        border: 1px solid #ccc;
-      }
-      .is-closed {
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Тест моего пафосного дропдауна</h1>
-    <div id="my-dropdown"></div>
+    <div class="dropdown" id="my-dropdown">
+      <button class="dropdown-toggle" type="button">Dropdown button</button>
+      <div class="dropdown-menu is-closed">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
 
-    <script type="module">
-      // Импортируем твой класс из собранного файла
-      import Dropdown from "./dist/dropdown.esm.js";
-
-      // Готовим данные для меню
-      const menuOptions = {
-        items: [{ text: "Профиль" }, { text: "Настройки" }, { text: "Выход" }],
-      };
-
-      // Находим контейнер
-      const dropdownContainer = document.getElementById("my-dropdown");
-
-      // Создаём экземпляр твоего чуда
-      new Dropdown(dropdownContainer, menuOptions);
-    </script>
+    <div class="dropdown" id="my-dropdown2">
+      <button class="dropdown-toggle" type="button">Dropdown button</button>
+      <div class="dropdown-menu is-closed">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
   </body>
+  <script type="module" src="./src/main.js"></script>
 </html>

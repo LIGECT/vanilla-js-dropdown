@@ -25,12 +25,18 @@
   "main": "dist/dropdown.cjs.js",
   "module": "dist/dropdown.esm.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c -w",
     "start": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.3",
     "live-server": "^1.2.0",
     "rollup": "^4.52.5"
+  },
+  "overrides": {
+    "braces": ">=3.0.3",
+    "micromatch": ">=4.0.2",
+    "uuid": ">=7.0.0"
   }
 }
