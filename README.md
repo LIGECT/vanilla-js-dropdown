@@ -4,7 +4,7 @@ A simple, lightweight, and customizable dropdown component built with pure JavaS
 
 ## Installation
 
-```
+```bash
 npm install drop-it-like-its-hot
 ```
 
@@ -12,22 +12,29 @@ npm install drop-it-like-its-hot
 
 ### 1. In simple HTML (via CDN or local files)
 
-`<link rel="stylesheet" href="path/to/dist/style.css"> <script src="path/to/dist/dropdown.min.js"></script> <script> const allDropdowns = document.querySelectorAll('.dropdown'); allDropdowns.forEach(el => new Dropdown(el)); </script> `
+```html
+<link rel="stylesheet" href="path/to/dist/style.css" />
+<script src="path/to/dist/dropdown.min.js"></script>
+<script>
+  const allDropdowns = document.querySelectorAll(".dropdown");
+  allDropdowns.forEach((el) => new Dropdown(el));
+</script>
+```
 
 ### 2. With a modern bundler (ESM)
 
-```
-import Dropdown from 'drop-it-like-its-hot';
-import 'drop-it-like-its-hot/dist/style.css';
+```javascript
+import Dropdown from "drop-it-like-its-hot";
+import "drop-it-like-its-hot/dist/style.css";
 
-const dropdown = new Dropdown(document.querySelector('.dropdown'));
+const dropdown = new Dropdown(document.querySelector(".dropdown"));
 ```
 
 ### Required HTML Structure
 
 Your HTML must follow the BEM-like structure:
 
-```
+```html
 <div class="dropdown">
   <button class="dropdown__button">Toggle Menu</button>
   <div class="dropdown__menu">
@@ -37,4 +44,4 @@ Your HTML must follow the BEM-like structure:
 </div>
 ```
 
-The class dropdown**menu--visible is toggled on the .dropdown**menu element to control visibility.
+The class `.dropdown__menu--visible` is toggled on the `.dropdown__menu` element to control visibility.
