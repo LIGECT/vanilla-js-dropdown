@@ -48,5 +48,8 @@
     "braces": ">=3.0.3",
     "micromatch": ">=4.0.2",
     "uuid": ">=7.0.0"
+  },
+  "dependencies": {
+    "lucide": "^0.552.0"
   }
 }

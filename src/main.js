@@ -1,4 +1,5 @@
 import "./style.css";
+import { createChevronDownIcon, createChevronUpIcon } from "./utils/Icons.js";
 class Dropdown {
   constructor(element) {
     if (!element) {
@@ -8,9 +9,14 @@ class Dropdown {
     }
 
     this.container = element;
-    this.toggleButton = this.container.querySelector(".dropdown__button");
-    this.menu = this.container.querySelector(".dropdown__menu");
 
+    this.toggleButton = this.container.querySelector(".dropdown__button");
+    this.chevronDown = createChevronDownIcon();
+    this.chevronUp = createChevronUpIcon();
+    this.toggleButton.append(this.chevronDown);
+    this.isOpen = false;
+
+    this.menu = this.container.querySelector(".dropdown__menu");
     this.boundToggle = this.toggle.bind(this);
 
     if (!this.toggleButton || !this.menu) {
@@ -24,6 +30,15 @@ class Dropdown {
 
   toggle() {
     this.menu.classList.toggle("dropdown__menu--visible");
+
+    this.isOpen = !this.isOpen;
+    const currentIcon = this.toggleButton.querySelector(".icon");
+
+    if (this.isOpen) {
+      currentIcon?.replaceWith(this.chevronUp);
+    } else {
+      currentIcon?.replaceWith(this.chevronDown);
+    }
   }
 
   destroy() {
