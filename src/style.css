@@ -1,8 +1,8 @@
 :root {
-  --primary-text-color: #1a1a1a;
   --accent-color: #ff4500;
-  --button-background: rgba(255, 69, 0, 0);
-  --frame: #888888;
+  --base-color: #1a1a1a;
+  --hover-text-color: #ffffff;
+  --frame-color: #dddddd;
 }
 * {
   box-sizing: border-box;
@@ -10,42 +10,54 @@
 
 .dropdown {
   position: relative;
+  display: inline-block;
 }
 
 .dropdown__menu {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  box-shadow: 0px 3px 10px -4px;
-  border: 1px solid var(--frame);
+  top: 100%;
+  left: 0;
+  margin-top: 2%;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--frame-color);
+  min-width: 100%;
   display: flex;
   flex-direction: column;
-  transition: opacity 0.3s, visibility 0.3s;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
 .dropdown__menu--visible {
   visibility: visible;
   opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
 }
 
 .dropdown__button {
-  color: var(--primary-text-color);
-  padding: 0.25rem;
-  border: 1px solid var(--frame);
-  background-color: var(--button-background);
+  color: var(--base-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid var(--frame-color);
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   background: transparent;
   cursor: pointer;
   gap: 0.5rem;
+  transition: border-color 0.3s ease;
 }
 
 .chevron-down,
 .chevron-up {
   color: var(--accent-color);
-  width: 1rem;
-  height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
   transition: color 0.3s;
 }
 
@@ -55,12 +67,32 @@
 }
 
 .dropdown__item {
-  padding: 0.5rem;
+  position: relative;
+  display: block;
+  padding: 12px 16px;
   text-decoration: none;
-  color: var(--primary-text-color);
-  margin: 0.25rem;
+  color: var(--base-color);
+  transition: color 0.3s ease;
+  isolation: isolate;
+}
+
+.dropdown__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
 }
 
 .dropdown__item:hover {
-  border-bottom: 1px solid var(--accent-color);
+  color: var(--hover-text-color);
+}
+
+.dropdown__item:hover::before {
+  opacity: 1;
 }
