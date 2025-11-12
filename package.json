@@ -42,14 +42,12 @@
     "@rollup/plugin-terser": "^0.4.4",
     "live-server": "^1.2.0",
     "rollup": "^4.52.5",
-    "rollup-plugin-postcss": "^4.0.2"
+    "rollup-plugin-postcss": "^4.0.2",
+    "lucide": "^0.552.0"
   },
   "overrides": {
     "braces": ">=3.0.3",
     "micromatch": ">=4.0.2",
     "uuid": ">=7.0.0"
-  },
-  "dependencies": {
-    "lucide": "^0.552.0"
   }
 }
